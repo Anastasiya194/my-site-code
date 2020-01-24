@@ -9,36 +9,188 @@
     />
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <script src="main.js"></script>
-    <title>Главная</title>
+    <title>Моё портфолио</title>
   </head>
   <body>
     @@include('header/index.html')
-  </div>
-</div>
-<div class="input-data">
-    <div class="conteiner">
-        <div class="input-data block" id="Home">
-          <div class="input-data__title">
-            Smirnova
-            Anastasia
-          </div>
-          <div class="input-data__subtitle">
-            Frontend-developer
-            23 years old, Tolyatti
-          </div>
-          <img class="input-data__photo" src="static/images/main-photo.png" alt="моё фото">
+    <div class="input-data" id="Home">
+      <div class="container">
+        <div class="input-data__title">
+          Smirnova
+          Anastasia
+        </div>
+        <div class="input-data__subtitle">
+          Frontend-developer
+          23 years old, Tolyatti
+        </div>
+        <form>
+          <button>ру</button>
+          <span>/</span>
+          <button>eng</button>
+        </form>
+        <img class="input-data__photo" src="static/images/main-photo.png" alt="моё фото">
       </div>
     </div>
-</div>
-<div class="block" id="About me">About me</div>
-
-<div class="block" id="Skills">Skills</div>
-
-<div class="block" id="Portfolio">Portfolio</div>
-
-<div class="block" id="Contacts">Contacts</div>
-   @@include('footer/index.html') 
+    <div class="about-me" id="About me">
+      <div class="container">
+        <div class="about-me__title">
+          About me
+        </div>
+        <div class="about-me__message">
+          Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser and responsive sites, as well as complex web applications on React.
+        </div>
+        <div class="about-me__message">
+          I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create interesting and quality sites.
+        </div>
+        <div class="about-me__message">
+          I ready to implement excellent projects with wonderful people. Ready for employment in the office, remote work or for small freelance orders.
+        </div>
+      </div>
+    </div>
+    <div class="skills" id="Skills">
+      <div class="container>">
+        <div class="skills__title">
+          Skills
+        </div>
+        <div class="skills__subtitle">
+          I work in such programs as
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-1.png" alt="Figma">
+          <div class="skill__title">
+            Figma
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              80%
+            </div>
+            <progress id="progressbar" value="80" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-2.png" alt="Photoshop">
+          <div class="skill__title">
+            Photoshop
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              20%
+            </div>
+            <progress id="progressbar" value=20 max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-3.png" alt="Illustrator">
+          <div class="skill__title">
+            Illustrator
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              20%
+            </div>
+            <progress id="progressbar" value="20" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-4.png" alt="HTML 5">
+          <div class="skill__title">
+            HTML 5
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              85%
+            </div>
+            <progress id="progressbar" value="85" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-5.png" alt="CSS/SCSS">
+          <div class="skill__title">
+            CSS/SCSS
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              55%
+            </div>
+            <progress id="progressbar" value=55 max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-6.png" alt="JavaScript">
+          <div class="skill__title">
+            JavaScript
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              5%
+            </div>
+            <progress id="progressbar" value="5" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-7.png" alt="React JS">
+          <div class="skill__title">
+            React JS
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              0%
+            </div>
+            <progress id="progressbar" value="0" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-8.png" alt="Gulp">
+          <div class="skill__title">
+            Gulp
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              0%
+            </div>
+            <progress id="progressbar" value="0" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-9.png" alt="Git/GitHub">
+          <div class="skill__title">
+            Git/GitHub
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              15%
+            </div>
+            <progress id="progressbar" value="15" max="100"></progress> 
+          </div>
+        </div>
+        <div class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-10.png" alt="BEM">
+          <div class="skill__title">
+            BEM
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__subtitle">
+              10%
+            </div>
+            <progress id="progressbar" value="10" max="100"></progress> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio" id="Portfolio">
+      <div class="container">
+        <div class="portfolio__title">
+          Portfolio
+        </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1/3</div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('footer/index.html') 
   </body>
   <script src="index.js"></script>
 </html>

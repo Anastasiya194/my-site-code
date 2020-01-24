@@ -3,28 +3,37 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  width: 1440px;
+}
+
+.external-unit {
+  border-bottom: 1px solid black;
 }
 
 a {
   color: #828282;
   text-decoration: none;
-  }
-
-a:active{
+  
+  &:active {
   color: #070707;
+  }
 }
-.nav {
+nav {
+  height: 22px;
+  font-size: 18px;
+  line-height: 21px;
+  list-style-type: none;
+  margin-top: 35px;
+  margin-bottom: 31px;
+}
+
+li {
+  list-style-type: none;
+  display: block;
+}
+ul {
+  margin-left: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 980px;
-  height: 22px;
-  position: fixed;
-  background: #fff;
-  font-size: 18px;
-  line-height: 21px;
-  border-bottom: 1px solid black;
-  list-style-type: none;
 }
