@@ -9,35 +9,36 @@
     />
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <script src="main.js"></script>
     <title>Главная</title>
   </head>
   <body>
     @@include('header/index.html')
-    <main class="index-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Главная</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на главной странице
-        </h2>
-        <div class="parallax-card">
-          <div class="parallax-card__wrapper-img">
-            <img
-              class="parallax-card__img"
-              src="static/images/cactus.jpg"
-              alt="Картинка кактуса"
-            />
+  </div>
+</div>
+<div class="input-data">
+    <div class="conteiner">
+        <div class="input-data block" id="Home">
+          <div class="input-data__title">
+            Smirnova
+            Anastasia
           </div>
-
-          <div class="parallax-card__description">
-            <p class="parallax-card__paragraph">Кактус маминой подруги</p>
-            <p class="parallax-card__paragraph">
-              Не нужно поливать и никогда не сохнет
-            </p>
+          <div class="input-data__subtitle">
+            Frontend-developer
+            23 years old, Tolyatti
           </div>
-        </div>
+          <img class="input-data__photo" src="static/images/main-photo.png" alt="моё фото">
       </div>
-    </main>
-    @@include('footer/index.html')
+    </div>
+</div>
+<div class="block" id="About me">About me</div>
+
+<div class="block" id="Skills">Skills</div>
+
+<div class="block" id="Portfolio">Portfolio</div>
+
+<div class="block" id="Contacts">Contacts</div>
+   @@include('footer/index.html') 
   </body>
   <script src="index.js"></script>
 </html>
