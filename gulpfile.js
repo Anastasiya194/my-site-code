@@ -101,7 +101,7 @@ async function buildProject() {
   // Обработка картинок
   await img("./src/static/images/*", "./build/static/images");
   // Обработка шрифтов
-  await fonts("./src/static/fonts/*", "./build/static/fonts");
+  await fonts("./src/static/fonts/**/*", "./build/static/fonts");
 }
 
 // Перебрасываем доп. сайты в папку "build"
