@@ -2,9 +2,9 @@
   background-color: #ffffff;
 
   &__menu {
-    height: 22px;
     padding-top: 35px;
     padding-bottom: 31px;
+    box-sizing: border-box;
     border-bottom: 1px solid black;
   }
 
