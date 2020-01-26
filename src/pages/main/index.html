@@ -14,7 +14,7 @@
   @@include('header/index.html')
   <section class="input-data" id="input-data">
     <div class="container">
-      <div class="input-data-info">
+      <div class="input-data__info">
         <h1 class="input-data__title">
           Smirnova Anastasia
         </h1>
@@ -22,34 +22,34 @@
           Frontend-developer
           23 years old, Tolyatti
         </div>
-        <form>
-          <button>ру</button>
-          <span>/</span>
-          <button>eng</button>
-        </form>
+        <div class="input-data__language-switching">
+          <button class="input-data__switch">ру</button>
+          <span class="input-data__delimiter">I</span>
+          <button class="input-data__switch input-data__switch_active">eng</button>
+        </div>
       </div>
       <img class="input-data__photo" src="static/images/main-photo.png" alt="моё фото">
     </div>
   </section>
-  <sectiom class="about-me" id="about me">
+  <section class="about-me" id="about-me">
     <div class="container">
       <h2 class="about-me__title">
         About me
       </h2>
-      <div class="about-me__message">
-        Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser
-        and responsive sites, as well as complex web applications on React.
-      </div>
-      <div class="about-me__message">
-        I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create
-        interesting and quality sites.
-      </div>
-      <div class="about-me__message">
-        I ready to implement excellent projects with wonderful people. Ready for employment in the office, remote work
-        or for small freelance orders.
-      </div>
+        <div class="about-me__message about-me__message__one">
+          Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser
+          and responsive sites, as well as complex web applications on React.
+        </div>
+        <div class="about-me__message about-me__message_two">
+          I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create
+          interesting and quality sites.
+        </div>
+        <div class="about-me__message about-me__message_three">
+          I ready to implement excellent projects with wonderful people. Ready for employment in the office, remote work
+          or for small freelance orders.
+        </div>
     </div>
-  </sectiom>
+  </section>
   <section class="skills" id="skills">
     <div class="container>">
       <h2 class="skills__title">
@@ -58,126 +58,128 @@
       <div class="skills__subtitle">
         I work in such programs as
       </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-1.png" alt="Figma">
-        <div class="skill__title">
-          Figma
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            80%
+      <ul class="clean-point skills__items">
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-1.png" alt="Figma">
+          <div class="skill__title">
+            Figma
           </div>
-          <progress id="progressbar" value="80" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-2.png" alt="Photoshop">
-        <div class="skill__title">
-          Photoshop
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            20%
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              80%
+            </div>
+            <progress id="progressbar" value="80" max="100"></progress>
           </div>
-          <progress id="progressbar" value=20 max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-3.png" alt="Illustrator">
-        <div class="skill__title">
-          Illustrator
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            20%
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-2.png" alt="Photoshop">
+          <div class="skill__title">
+            Photoshop
           </div>
-          <progress id="progressbar" value="20" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-4.png" alt="HTML 5">
-        <div class="skill__title">
-          HTML 5
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            85%
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              20%
+            </div>
+            <progress id="progressbar" value=20 max="100"></progress>
           </div>
-          <progress id="progressbar" value="85" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-5.png" alt="CSS/SCSS">
-        <div class="skill__title">
-          CSS/SCSS
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            55%
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-3.png" alt="Illustrator">
+          <div class="skill__title">
+            Illustrator
           </div>
-          <progress id="progressbar" value=55 max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-6.png" alt="JavaScript">
-        <div class="skill__title">
-          JavaScript
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            5%
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              20%
+            </div>
+            <progress id="progressbar" value="20" max="100"></progress>
           </div>
-          <progress id="progressbar" value="5" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-7.png" alt="React JS">
-        <div class="skill__title">
-          React JS
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            0%
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-4.png" alt="HTML 5">
+          <div class="skill__title">
+            HTML 5
           </div>
-          <progress id="progressbar" value="0" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-8.png" alt="Gulp">
-        <div class="skill__title">
-          Gulp
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            0%
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              85%
+            </div>
+            <progress id="progressbar" value="85" max="100"></progress>
           </div>
-          <progress id="progressbar" value="0" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-9.png" alt="Git/GitHub">
-        <div class="skill__title">
-          Git/GitHub
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            15%
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-5.png" alt="CSS/SCSS">
+          <div class="skill__title">
+            CSS/SCSS
           </div>
-          <progress id="progressbar" value="15" max="100"></progress>
-        </div>
-      </div>
-      <div class="skills__skill">
-        <img class="skills__icon" src="static/images/icon-10.png" alt="BEM">
-        <div class="skill__title">
-          BEM
-        </div>
-        <div class="skill__indicators">
-          <div class="skill__percents">
-            10%
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              55%
+            </div>
+            <progress id="progressbar" value=55 max="100"></progress>
           </div>
-          <progress id="progressbar" value="10" max="100"></progress>
-        </div>
-      </div>
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-6.png" alt="JavaScript">
+          <div class="skill__title">
+            JavaScript
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              5%
+            </div>
+            <progress id="progressbar" value="5" max="100"></progress>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-7.png" alt="React JS">
+          <div class="skill__title">
+            React JS
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              0%
+            </div>
+            <progress id="progressbar" value="0" max="100"></progress>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-8.png" alt="Gulp">
+          <div class="skill__title">
+            Gulp
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              0%
+            </div>
+            <progress id="progressbar" value="0" max="100"></progress>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-9.png" alt="Git/GitHub">
+          <div class="skill__title">
+            Git/GitHub
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              15%
+            </div>
+            <progress id="progressbar" value="15" max="100"></progress>
+          </div>
+        </li>
+        <li class="skills__skill">
+          <img class="skills__icon" src="static/images/icon-10.png" alt="BEM">
+          <div class="skill__title">
+            BEM
+          </div>
+          <div class="skill__indicators">
+            <div class="skill__percents">
+              10%
+            </div>
+            <progress id="progressbar" value="10" max="100"></progress>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
   <section class="portfolio" id="portfolio">
@@ -185,7 +187,7 @@
       <h2 class="portfolio__title">
         Portfolio
       </h2>
-    
+
       <div class="slider">
         <img class="slider__slide" src="static/images/company-infinitely.png" alt="портфолио сайт: сompany-Infinitely">
       </div>
@@ -195,7 +197,8 @@
           An example site for a construction company
         </div>
         <div clsss="slider__description">
-          A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.
+          A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is
+          responsive and cross-browser, but without adding interactivity via JavaScript.
         </div>
         <div class="slider__pagination">
           <button class="slider__pagination-item slider__pagination-item_active">
@@ -205,8 +208,9 @@
         </div>
       </div>
     </div>
-  </section>    
+  </section>
   @@include('footer/index.html')
 </body>
- <script src="index.js"></script>
+<script src="index.js"></script>
+
 </html>

@@ -1,14 +1,95 @@
 .input-data {
-height: 706px;
-}
-.input-data__title {
-  font-size: 47px; 
-  line-height: 55px;
-  color: #070707;
+  height: 706px;
+
+  &__title {
+    font-size: 47px;
+    line-height: 55px;
+    color: #070707;
+    max-width: 218px;
+    margin-top: 40px;
+    margin-bottom: 36px;
+    margin-right: 82px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 168px;
+    color: #070707;
+    margin-top: 103px;
+    margin-bottom: 44px;
+    
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__language-switching {
+    display: flex;
+    height: 20px;
+    max-width: 63px;
+    transform: rotate(-90deg);
+    margin: 102px -20px 10px auto;
+  }
+
+  &__delimiter {
+    font-size: 16px;
+    line-height: 19px;
+    color: #070707;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__switch {
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 63px;
+    padding: 0;
+
+    &:hover, &_active {
+      color: #070707;
+    }
+  }
+
+  &__photo {
+    max-width: 980px;
+    margin-bottom: 60px;
+  }
 }
 
-.input-data__subtitle {
-  font-size: 18px;
-  line-height: 21px;
-  color: #070707;
+.about-me {
+  height: 635px;
+  background-color:#F6F6F6;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+
+  &__title{
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: #070707;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__message {
+    width: 478px;
+    border: 2.5px solid #070707;
+    padding: 15px;
+
+    &__one {
+      margin-top: 50px;
+      margin-left: 431px;
+      margin-right: 531px;
+      margin-bottom: 20px;
+    }
+  }
 }

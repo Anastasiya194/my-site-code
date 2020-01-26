@@ -14,15 +14,16 @@ body {
   padding-right: 20px;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
+.clean-point {
+  margin: 0;
+  padding: 0;
 
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
+  li {
+    list-style-type: none;
   }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+}
+
+.clear-link {
+  text-decoration: none;
+  color: #828282;
 }
