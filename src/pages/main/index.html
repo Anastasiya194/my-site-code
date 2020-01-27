@@ -187,25 +187,36 @@
       <h2 class="portfolio__title">
         Portfolio
       </h2>
-
-      <div class="slider">
-        <img class="slider__slide" src="static/images/company-infinitely.png" alt="портфолио сайт: сompany-Infinitely">
+      <div class="portfilio_slider">
+        <img class="portfolio__slider-slide" src="static/images/company-infinitely.png" alt="портфолио сайт: сompany-Infinitely">
       </div>
-      <div class="slider__control">
-        <button class="slider__button-back" alt="кнопка назад"></button>
-        <div class="slider__title">
-          An example site for a construction company
+      <div class="portfolio__slider-control">
+        <button class="portfolio__button-back" alt="кнопка назад">
+          <img src="static/images/slider-button.png" alt="кнопка назад">
+        </button>
+        <div class="portfolio__switch">
+          <div class="portfolio__slider-title">
+            An example site for a construction company
+          </div>
+          <div class="portfolio__description">
+            A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is
+            responsive and cross-browser, but without adding interactivity via JavaScript.
+          </div>
+          <div class="portfolio__pagination">
+            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider-active">
+              <img src="static/images/switch.png" alt="кнопка переключателя">
+            </button>
+            <button class="portfolio__pagination-item-slider">
+              <img src="static/images/switch.png" alt="кнопка переключателя">
+            </button>
+            <button class="portfolio__pagination-item-slider">
+              <img src="static/images/switch.png" alt="кнопка переключателя">
+            </button>
+          </div>
         </div>
-        <div clsss="slider__description">
-          A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is
-          responsive and cross-browser, but without adding interactivity via JavaScript.
-        </div>
-        <div class="slider__pagination">
-          <button class="slider__pagination-item slider__pagination-item_active">
-          </button>
-          <button class="slider__pagination-item slider"></button>
-          <button class="slider__pagination-item slider"></button>
-        </div>
+        <button class="portfolio__button-back portfolio__button-back-forward" alt="кнопка вперёд">
+          <img src="static/images/slider-button.png" alt="кнопка вперёд">
+        </button>
       </div>
     </div>
   </section>
