@@ -33,7 +33,7 @@ async function html(src, dest) {
 async function scss(src, dest) {
   return await gulp
     .src(src)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on("error", sass.logError))
     .pipe(
       autoprefixer({
         cascade: false
@@ -52,7 +52,11 @@ async function js(src, dest) {
   return await gulp
     .src(src)
     .pipe(concat("script.js"))
-    .pipe(uglify({ toplevel: true }))
+    .pipe(
+      uglify({ toplevel: true }).on("error", function() {
+        this.emit("end");
+      })
+    )
     .pipe(gulp.dest(dest))
     .pipe(browserSync.reload({ stream: true }));
 }

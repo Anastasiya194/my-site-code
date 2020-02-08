@@ -203,10 +203,10 @@
             responsive and cross-browser, but without adding interactivity via JavaScript.
           </div>
           <div class="portfolio__pagination">
-            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider-active">
+            <button class="portfolio__pagination-item-slider">
             </button>
-            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider-active">
-            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider-active">
+            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider_active">
+            <button class="portfolio__pagination-item-slider">
             </button>
           </div>
         </div>
@@ -217,7 +217,50 @@
     </div>
   </section>
   @@include('footer/index.html')
+  <div class="modal-window"> 
+    
+    <form action="" class="modal-window__form"> 
+      <button class="modal-window__button-close" type="button"> 
+        <div class="modal-window__line modal-window__line_one"></div>
+        <div class="modal-window__line modal-window__line_two"></div>
+      </button>
+      <label class="modal-window__group_one">
+        <div class="modal-window__title">
+          Как вас зовут?<span class="required">*</span>
+        </div>
+        <input type="text" placeholder="Иван Иванович" class="modal-window__name">
+      </label>
+      <label class="modal-window__group_two">
+        <div class="modal-window__title">
+          Тема сообщения <span class="required">*</span>
+        </div>
+        
+        <input type="text" class="modal-window__topic">
+      </label>
+      <label class="modal-window__group_three">
+        <div class="modal-window__title">
+          Ваш Email<span class="required">*</span>
+        </div>
+        <input type="email" class="modal-window__mail"> 
+      </label>
+      <label class="modal-window__group_four">
+        <div class="modal-window__title">
+          Что вы хотите обсудить со мной?
+        </div>
+        <textarea name="comment" class="modal-window__comment"></textarea>
+      </label>
+      <label class="modal-window__group_five"> 
+        <input type="checkbox" class="modal-window__agreement"> 
+        <div class="modal-window__title">
+          Нажав на кнопку, вы даете согласие на обработку ваших личных данных
+        </div>
+      </label>
+      <button class="modal-window__button-send">
+        Отправить
+      </button>
+    </form>
+  </div>
 </body>
-<script src="index.js"></script>
+<script src="script.js"></script>
 
 </html>

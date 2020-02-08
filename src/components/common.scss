@@ -2,8 +2,13 @@
 @import "./header/style.scss";
 @import "./footer/style.scss";
 
-body {
+* {
   font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 400;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .container {

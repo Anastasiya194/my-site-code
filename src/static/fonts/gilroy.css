@@ -9,6 +9,6 @@
   font-family: "Gilroy";
   src: url("./medium/gilroy-medium.woff") format("woff2"),
     url("./medium/gilroy-medium.woff2") format("woff");
-  font-weight: medium;
+  font-weight: 400;
   font-style: normal;
 }

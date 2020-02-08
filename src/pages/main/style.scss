@@ -1,8 +1,11 @@
+@import "./../../components/variables.scss";
+
 .input-data {
   &__title {
     font-size: 47px;
     line-height: 55px;
-    color: #070707;
+    color: $black-color;
+    font-weight: bold;
     max-width: 218px;
     margin-top: 40px;
     margin-bottom: 36px;
@@ -13,7 +16,7 @@
     font-size: 18px;
     line-height: 21px;
     max-width: 168px;
-    color: #070707;
+    color: $black-color;
     margin-top: 103px;
     margin-bottom: 44px;
   }
@@ -33,7 +36,7 @@
   &__delimiter {
     font-size: 16px;
     line-height: 19px;
-    color: #070707;
+    color: $black-color;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -51,7 +54,7 @@
 
     &:hover,
     &_active {
-      color: #070707;
+      color: $black-color;
     }
   }
 
@@ -72,7 +75,7 @@
     font-size: 34px;
     line-height: 40px;
     text-align: center;
-    color: #070707;
+    color: $black-color;
     font-weight: bold;
     margin-top: 70px;
     margin-bottom: 0;
@@ -80,7 +83,7 @@
 
   &__message {
     width: 481px;
-    border: 2.5px solid #070707;
+    border: 2.5px solid $black-color;
     padding: 14px;
     box-sizing: border-box;
     font-size: 18px;
@@ -92,8 +95,8 @@
       background-color: #f6f6f6;
       width: 30px;
       height: 30px;
-      border-bottom: solid 2.5px #070707;
-      border-right: solid 2.5px #070707;
+      border-bottom: solid 2.5px $black-color;
+      border-right: solid 2.5px $black-color;
       box-sizing: border-box;
 
       transform: rotate(45deg);
@@ -109,7 +112,6 @@
 
       &:before {
         right: 28px;
-        
       }
     }
 
@@ -128,7 +130,6 @@
 
       &:before {
         right: 28px;
-        
       }
     }
   }
@@ -143,7 +144,7 @@
     font-size: 34px;
     line-height: 40px;
     text-align: center;
-    color: #070707;
+    color: $black-color;
     font-weight: bold;
     margin-top: 70px;
     margin-bottom: 0;
@@ -152,7 +153,7 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    color: #070707;
+    color: $black-color;
     margin-top: 28px;
     margin-bottom: 16px;
   }
@@ -162,8 +163,7 @@
     justify-content: space-between;
     margin-left: -10px !important;
     margin-right: -10px !important;
-    margin-bottom: 74px  !important;
-    
+    margin-bottom: 74px !important;
   }
   &__item {
     margin-left: 10px;
@@ -204,38 +204,36 @@
     &-progressbar {
       width: 142px;
       display: block;
-      background: #070707;
+      background: $black-color;
       background: -o-linear-gradient(#828282);
 
       border: 0;
       height: 9px;
 
-        &::-webkit-progress-bar {
-        background-color: #E5E5E5;
+      &::-webkit-progress-bar {
+        background-color: #e5e5e5;
         border-radius: 2px;
-        }
-        &::-webkit-progress-value {
-        border-radius: 2px; 
-        }
+      }
+      &::-webkit-progress-value {
+        border-radius: 2px;
+      }
     }
   }
-  
 }
 
 .portfolio {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
-  
+  background-color: #f6f6f6;
 
   &__title {
     font-size: 34px;
     line-height: 40px;
     text-align: center;
-    color: #070707;
+    color: $black-color;
     font-weight: bold;
     margin-top: 60px;
-    margin-bottom: 0
+    margin-bottom: 0;
   }
   &__slider-slide {
     max-width: 980px;
@@ -246,7 +244,6 @@
   &__slider-control {
     display: flex;
     justify-content: space-between;
-    
   }
   &__button-back {
     padding: 0;
@@ -267,21 +264,19 @@
     line-height: 21px;
     text-align: center;
     text-decoration-line: underline;
-    color: #070707;
-    
+    color: $black-color;
   }
 
   &__description {
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    color: #000000;
+    color: $black-color;
     margin-bottom: 25px;
     margin-top: 15px;
     width: 580px;
     height: 63px;
     margin-right: -7px;
-    
   }
 
   &__pagination {
@@ -292,22 +287,128 @@
     padding: 0;
     border: none;
     border-radius: 100%;
-    background-color:#E5E5E5;
+    background-color: #e5e5e5;
     width: 10px;
     height: 10px;
     margin-right: 7px;
-   
+    transition: background-color 0.4s;
 
-    &-active:hover {
-      background-color: #070707;
+    &_active {
+      background-color: $black-color;
     }
-    &-active:focus {
-      background-color: #070707;
+
+    &:not(.portfolio__pagination-item-slider_active):hover,
+    &:not(.portfolio__pagination-item-slider_active):focus {
+      background-color: #808080;
     }
   }
- 
+
   &__button-back-forward {
     transform: rotate(-180deg);
   }
+}
+.modal-window {
+  background-color: rgba(246, 246, 246, 0.99);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s; 
+  display: flex;
+
+  &_show {
+    opacity: 1;
+    pointer-events: auto;
+  }
   
+  &__form {
+    background-color: #ffffff;
+    width: 680px;
+    height: 542px;
+    border: 2.5px solid $black-color;
+    margin: auto;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $black-color;
+  }
+
+  &__button-close {
+    position: absolute;
+    right: -34;
+    width: 25.46px;
+    height: 24px;
+    border: none;
+    padding: 0;
+  }
+
+  &__line {
+    width: 32px;
+    height: 4px;
+    background-color: #cccccc;
+    border-radius: 16.1px;
+
+    &_one {
+      transform: rotate(-45deg);
+    }
+
+    &_two {
+      transform: rotate(45deg);
+      margin-top: -4px;
+    }
+  }
+
+  &__group {
+    background: #ffffff;
+
+    &_one {
+      margin-top: 38.5px;
+      margin-bottom: 17.5px;
+      margin-top: 41px;
+    }
+    &_two {
+      margin-right: 17.5px;
+    }
+    &_four {
+      margin-top: 17.5px;
+    }
+  }
+
+  &__name {
+    width: 595px;
+    height: 45px;
+    border: 2.5px solid #cccccc;
+    margin-top: 6px;
+  }
+
+  &__topic {
+    width: 285px;
+    height: 45px;
+    border: 2.5px solid #cccccc;
+  }
+  &__mail {
+    width: 285px;
+    height: 45px;
+    border: 2.5px solid #cccccc;
+  }
+  &__comment {
+    width: 595px;
+    height: 145;
+    border: 2.5px solid #cccccc;
+  }
+  &__agreement {
+    width: 16.5px;
+    height: 16.5px;
+    border: 2.5px solid #cccccc;
+    background-color: #ffffff;
+  }
 }
