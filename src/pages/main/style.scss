@@ -53,7 +53,8 @@
     padding: 0;
 
     &:hover,
-    &_active {
+    &:active,
+    &:focus {
       color: $black-color;
     }
   }
@@ -246,12 +247,31 @@
     justify-content: space-between;
   }
   &__button-back {
-    padding: 0;
-    border: none;
-    background-color: #11ffee00;
+    position: relative;
+    border-radius:100%;
+    border: 2.5px solid #070707;
+    box-sizing: border-box;
     width: 42px;
     height: 42px;
+    &:hover,
+    &:focus {
+      border: 2.5px solid #808080;
+    }
+    &::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      border-bottom: 2.5px solid #070707;
+      border-right: 2.5px solid #070707;
+      box-sizing: border-box;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(137deg);
+      position: absolute;
+      bottom: 10px;
+      left: 12.5px;
+    }
   }
+
 
   &__switch {
     display: flex;
@@ -263,8 +283,12 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    text-decoration-line: underline;
+    border-bottom: 1px dashed #000000;
     color: $black-color;
+    &:hover {
+      border-bottom: 1px solid #000000;
+      cursor: pointer;
+    }
   }
 
   &__description {
@@ -342,20 +366,25 @@
     color: $black-color;
   }
 
-  &__button-close {
+  &__button-close  {
     position: absolute;
     right: -34;
     width: 25.46px;
     height: 24px;
     border: none;
     padding: 0;
-  }
+      &:hover .modal-window__line, &:focus .modal-window__line {
+        background: #070707;
+      }
+    }
+  
 
   &__line {
     width: 32px;
     height: 4px;
     background-color: #cccccc;
     border-radius: 16.1px;
+    
 
     &_one {
       transform: rotate(-45deg);
@@ -364,6 +393,7 @@
     &_two {
       transform: rotate(45deg);
       margin-top: -4px;
+      
     }
   }
 

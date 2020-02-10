@@ -34,6 +34,14 @@
     color: #ffffff;
     font-weight: bold;
     border: none;
+    &:hover,
+    &:focus {
+      background-color:transparent;
+      color: #070707;
+      border: 2.5px solid #070707;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
   }
 
   &__content {
@@ -46,7 +54,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 327px;
+    width: 328px;
     margin: 40px 0 36px 0!important;
   }
 
@@ -68,6 +76,11 @@
     text-align: center;
     color: #000000;
     text-decoration: none;
+    &:hover,
+    &:focus {
+      background: #070707;
+      color: #FFFFFF;
+    }
   }
   &__who-did {
     display: flex;
@@ -82,9 +95,13 @@
   &__designer {
     color: #828282;
     text-decoration: none; 
+    border-bottom: 1px dashed #828282;
 
-    &:hover { 
-      text-decoration: underline; 
+    &:hover, 
+    &:focus { 
+      border-bottom: 1px solid #070707;
+      color: #070707;
+      cursor: pointer;
     }
   }
 }
