@@ -1,5 +1,11 @@
 .header {
+  @media (max-width: 500px) {
+   .header {
+      display: none;
+   }
+  }
   background-color: #ffffff;
+
 
   &__menu {
     padding-top: 35px;
@@ -29,6 +35,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 }

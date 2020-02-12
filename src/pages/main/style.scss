@@ -1,6 +1,6 @@
 @import "./../../components/variables.scss";
-
 .input-data {
+  
   &__title {
     font-size: 47px;
     line-height: 55px;
@@ -248,7 +248,7 @@
   }
   &__button-back {
     position: relative;
-    border-radius:100%;
+    border-radius: 100%;
     border: 2.5px solid #070707;
     box-sizing: border-box;
     width: 42px;
@@ -271,7 +271,6 @@
       left: 12.5px;
     }
   }
-
 
   &__switch {
     display: flex;
@@ -340,14 +339,14 @@
   top: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .4s; 
+  transition: opacity 0.4s;
   display: flex;
 
   &_show {
     opacity: 1;
     pointer-events: auto;
   }
-  
+
   &__form {
     background-color: #ffffff;
     width: 680px;
@@ -364,27 +363,55 @@
     font-size: 14px;
     line-height: 16px;
     color: $black-color;
+    margin-bottom: 6px;
+
+    &_one {
+      margin-top: 38.5px;
+    }
+    &_two {
+      margin-top: 20px;
+    }
+    &_four {
+      margin-top: 20px;
+    }
+    &_five {
+      margin-left: 15px;
+      color: #dddddd;
+
+      &:hover,
+      &:focus {
+        color: #828282;
+      }
+    }
   }
 
-  &__button-close  {
+  &__button-close {
     position: absolute;
     right: -34;
     width: 25.46px;
     height: 24px;
     border: none;
     padding: 0;
-      &:hover .modal-window__line, &:focus .modal-window__line {
-        background: #070707;
-      }
-    }
-  
+    cursor: pointer;
 
+    &:hover .modal-window__line,
+    &:focus .modal-window__line {
+      background-color: #070707;
+    }
+  }
+
+  &__agreement {
+    border: 2px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
   &__line {
     width: 32px;
     height: 4px;
     background-color: #cccccc;
     border-radius: 16.1px;
-    
+    transition: background-color 0.5s;
 
     &_one {
       transform: rotate(-45deg);
@@ -393,7 +420,6 @@
     &_two {
       transform: rotate(45deg);
       margin-top: -4px;
-      
     }
   }
 
@@ -401,15 +427,24 @@
     background: #ffffff;
 
     &_one {
-      margin-top: 38.5px;
       margin-bottom: 17.5px;
       margin-top: 41px;
     }
     &_two {
       margin-right: 17.5px;
+      display: inline-block;
+    }
+    &_three {
+      display: inline-block;
     }
     &_four {
       margin-top: 17.5px;
+    }
+    &_five {
+      display: flex;
+      margin-top: 20px;
+      color: #dddddd;
+      position: relative;
     }
   }
 
@@ -417,28 +452,126 @@
     width: 595px;
     height: 45px;
     border: 2.5px solid #cccccc;
-    margin-top: 6px;
+    box-sizing: border-box;
+    &:hover {
+      border: 2.5px solid #808080;
+      transition: border 0.5s;
+    }
+    &:active {
+      border: 2.5px solid #070707;
+      transition: border 0.5s;
+    }
   }
 
   &__topic {
     width: 285px;
     height: 45px;
     border: 2.5px solid #cccccc;
+    box-sizing: border-box;
+    display: inline-block;
+    &:hover {
+      border: 2.5px solid #808080;
+      transition: border 0.5s;
+    }
+    &:focus {
+      border: 2.5px solid #070707;
+      transition: border 0.5s;
+    }
   }
   &__mail {
     width: 285px;
     height: 45px;
     border: 2.5px solid #cccccc;
+    box-sizing: border-box;
+    display: inline-block;
+    &:hover {
+      border: 2.5px solid #808080;
+      transition: border 0.5s;
+    }
+    &:focus {
+      border: 2.5px solid #070707;
+      transition: border 0.5s;
+    }
   }
   &__comment {
     width: 595px;
     height: 145;
     border: 2.5px solid #cccccc;
+    box-sizing: border-box;
+    &:hover {
+      border: 2.5px solid #808080;
+      transition: border 0.5s;
+    }
+    &:focus {
+      border: 2.5px solid #070707;
+      transition: border 0.5s;
+    }
+    &:focus {
+      border: 2.5px solid #808080;
+      transition: border 0.5s;
+    }
+    &:focus {
+      border: 2.5px solid #070707;
+      transition: border 0.5s;
+    }
   }
   &__agreement {
-    width: 16.5px;
-    height: 16.5px;
+    position: absolute;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+
+    &:checked ~ .modal-window__fake-input {
+      border: 2.5px solid #070707;
+
+      .modal-window__check-mark {
+        opacity: 1;
+      }
+    }
+    &:checked ~ .modal-window__title_five {
+      color: #070707;
+    }
+  }
+  &__fake-input {
+    width: 19px;
+    height: 19px;
     border: 2.5px solid #cccccc;
     background-color: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 3px;
+
+    &:hover {
+      border: 2px solid #828282;
+      box-sizing: border-box;
+    }
+  }
+  &__check-mark {
+    position: absolute;
+    background-image: url(static/images/check.png);
+    left: 1px;
+    bottom: 1.5px;
+    width: 14px;
+    height: 14.41px;
+    opacity: 0;
+  }
+
+  &__button-send {
+    cursor: no-drop;
+    background-color: transparent;
+    color: #dddddd;
+    border: 2.5px solid #dddddd;
+    box-sizing: border-box;
+    width: 131px;
+    height: 42px;
+    border-radius: 30px;
+    margin-top: 20px;
+    &:hover,
+    &:focus {
+      color: #828282;
+      border: 2.5px solid #828282;
+      cursor: pointer;
+      transition: border 0.5s;
+    }
   }
 }

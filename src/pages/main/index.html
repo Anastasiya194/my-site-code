@@ -28,7 +28,11 @@
           <button class="input-data__switch input-data__switch_active">eng</button>
         </div>
       </div>
-      <img class="input-data__photo" src="static/images/main-photo.png" alt="моё фото">
+      <picture>
+        <source srcset="static/images/mobil.png" media="(max-width: 375px)"> 
+        <source srcset="static/images/main-desktop.png" media="(max-width: 768px)"> 
+          <img src="static/images/main-photo.png" class="input-data__photo">
+      </picture>    
     </div>
   </section>
   <section class="about-me" id="about-me">
@@ -223,38 +227,41 @@
         <div class="modal-window__line modal-window__line_one"></div>
         <div class="modal-window__line modal-window__line_two"></div>
       </button>
-      <label class="modal-window__group_one">
-        <div class="modal-window__title">
+      <label class="modal-window__group modal-window__group_one">
+        <div class="modal-window__title modal-window__title_one">
           Как вас зовут?<span class="required">*</span>
         </div>
         <input type="text" placeholder="Иван Иванович" class="modal-window__name">
       </label>
       <label class="modal-window__group_two">
-        <div class="modal-window__title">
+        <div class="modal-window__title modal-window__title_two">
           Тема сообщения <span class="required">*</span>
         </div>
         
         <input type="text" class="modal-window__topic">
       </label>
-      <label class="modal-window__group_three">
-        <div class="modal-window__title">
-          Ваш Email<span class="required">*</span>
+      <label class="modal-window__group modal-window__group_three">
+        <div class="modal-window__title modal-window__title_three">
+          Ваш Email<span class="modal-window__required">*</span>
         </div>
         <input type="email" class="modal-window__mail"> 
       </label>
-      <label class="modal-window__group_four">
-        <div class="modal-window__title">
+      <label class="modal-window__group modal-window__group_four">
+        <div class="modal-window__title modal-window__title_four">
           Что вы хотите обсудить со мной?
         </div>
         <textarea name="comment" class="modal-window__comment"></textarea>
       </label>
-      <label class="modal-window__group_five"> 
+      <label class="modal-window__group modal-window__group_five"> 
         <input type="checkbox" class="modal-window__agreement"> 
-        <div class="modal-window__title">
+        <div class="modal-window__fake-input"> 
+          <div class="modal-window__check-mark"></div>
+        </div>
+        <div class="modal-window__title modal-window__title_five">
           Нажав на кнопку, вы даете согласие на обработку ваших личных данных
         </div>
       </label>
-      <button class="modal-window__button-send">
+      <button class="modal-window__button-send modal-window__button-send_selected" disabled>
         Отправить
       </button>
     </form>
