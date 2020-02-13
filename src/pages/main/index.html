@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="/static/fonts/gilroy.css" />
   <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Моё портфолио</title>
 </head>
 
@@ -40,18 +41,18 @@
       <h2 class="about-me__title">
         About me
       </h2>
-      <div class="about-me__message about-me__message__one">
-        Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser
-        and responsive sites, as well as complex web applications on React.
-      </div>
-      <div class="about-me__message about-me__message__two">
-        I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create
-        interesting and quality sites.
-      </div>
-      <div class="about-me__message about-me__message__three">
-        I ready to implement excellent projects with wonderful people. Ready for employment in the office, remote work
-        or for small freelance orders.
-      </div>
+        <div class="about-me__message about-me__message__one">
+          Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser
+          and responsive sites, as well as complex web applications on React.
+        </div>
+        <div class="about-me__message about-me__message__two">
+          I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create
+          interesting and quality sites.
+        </div>
+        <div class="about-me__message about-me__message__three">
+          I ready to implement excellent projects with wonderful people. Ready for employment in the office, remote work
+          or for small freelance orders.
+        </div>
     </div>
   </section>
   <section class="skills" id="skills">
@@ -192,7 +193,11 @@
         Portfolio
       </h2>
       <div class="portfilio_slider">
-        <img class="portfolio__slider-slide" src="static/images/company-infinitely.png" alt="портфолио сайт: сompany-Infinitely">
+        <picture>
+          <source srcset="static/images/company-infinitely-mobil.png" media="(max-width: 375px)"> 
+          <source srcset="static/images/company-infinitely-desktop.png" media="(max-width: 768px)"> 
+          <img class="portfolio__slider-slide" src="static/images/company-infinitely.png" alt="портфолио сайт: сompany-Infinitely">
+        </picture>
       </div>
       <div class="portfolio__slider-control">
         <button class="portfolio__button-back" alt="кнопка назад">
@@ -221,7 +226,6 @@
   </section>
   @@include('footer/index.html')
   <div class="modal-window"> 
-    
     <form action="" class="modal-window__form"> 
       <button class="modal-window__button-close" type="button"> 
         <div class="modal-window__line modal-window__line_one"></div>

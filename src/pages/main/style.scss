@@ -10,6 +10,9 @@
     margin-top: 40px;
     margin-bottom: 36px;
     margin-right: 82px;
+    @media (max-width: 768px) {
+      margin-right: 60px;
+    }
   }
 
   &__subtitle {
@@ -23,6 +26,7 @@
 
   &__info {
     display: flex;
+    justify-content: space-between;
   }
 
   &__language-switching {
@@ -60,17 +64,16 @@
   }
 
   &__photo {
-    max-width: 980px;
     margin-bottom: 60px;
+    width: 100%;
   }
 }
 
 .about-me {
   // padding: 70px 0 0 0;
   background-color: #f6f6f6;
-  display: flex;
-  flex-direction: column;
   height: 635px;
+  overflow: hidden;
 
   &__title {
     font-size: 34px;
@@ -83,7 +86,7 @@
   }
 
   &__message {
-    width: 481px;
+    width: 478px;
     border: 2.5px solid $black-color;
     padding: 14px;
     box-sizing: border-box;
@@ -107,9 +110,12 @@
     }
 
     &__one {
-      margin-top: 51px;
-      margin-left: 200px;
-      margin-bottom: 38px;
+    margin-top: 51px;
+    margin-left: 200px;
+    margin-bottom: 38px;
+    @media(max-width: 768px) {
+      margin-left: 33px;
+    }
 
       &:before {
         right: 28px;
@@ -117,30 +123,38 @@
     }
 
     &__two {
-      margin-bottom: 38px;
-      margin-left: 300px;
-
+    margin-bottom: 38px;
+    margin-left: 300px;
+    @media(max-width: 768px) {
+      margin-left: 135px;
+    }
       &:before {
-        left: 28px;
+      left: 28px;
       }
     }
 
     &__three {
       margin-left: 200px;
       margin-bottom: 70px;
-
+      @media(max-width: 768px) {
+        margin-left: 33px;
+      }
       &:before {
         right: 28px;
       }
+    
     }
-  }
+  } 
 }
 
 .skills {
   // padding: 89px 0 22px 0;
   display: flex;
+  @media (max-width: 768px) {
+      justify-content: center;
+  }
   flex-direction: column;
-
+    
   &__title {
     font-size: 34px;
     line-height: 40px;
@@ -162,6 +176,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 768px) {  
+      justify-content: center;
+    }
     margin-left: -10px !important;
     margin-right: -10px !important;
     margin-bottom: 74px !important;
@@ -200,9 +217,15 @@
       font-size: 14px;
       line-height: 16px;
       margin-right: 11px;
+      @media (max-width: 768px){
+        margin-right: 8px;
+      }
     }
 
     &-progressbar {
+      @media (max-width: 768px){
+        width:111px;
+      }
       width: 142px;
       display: block;
       background: $black-color;
@@ -237,7 +260,7 @@
     margin-bottom: 0;
   }
   &__slider-slide {
-    max-width: 980px;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 35px;
   }
@@ -330,6 +353,7 @@
     transform: rotate(-180deg);
   }
 }
+
 .modal-window {
   background-color: rgba(246, 246, 246, 0.99);
   position: fixed;
@@ -350,6 +374,9 @@
   &__form {
     background-color: #ffffff;
     width: 680px;
+    @media (max-width: 768px) {
+      width: 648px;
+    }
     height: 542px;
     border: 2.5px solid $black-color;
     margin: auto;
@@ -450,6 +477,9 @@
 
   &__name {
     width: 595px;
+    @media (max-width: 768px) {
+      width: 563px;
+    }
     height: 45px;
     border: 2.5px solid #cccccc;
     box-sizing: border-box;
@@ -465,6 +495,9 @@
 
   &__topic {
     width: 285px;
+    @media (max-width: 768px) {
+      width: 270px;
+    }
     height: 45px;
     border: 2.5px solid #cccccc;
     box-sizing: border-box;
@@ -480,6 +513,9 @@
   }
   &__mail {
     width: 285px;
+    @media (max-width: 768px) {
+      width: 270px;
+    }
     height: 45px;
     border: 2.5px solid #cccccc;
     box-sizing: border-box;
@@ -495,6 +531,9 @@
   }
   &__comment {
     width: 595px;
+    @media (max-width: 768px) {
+      width: 563px;
+    }
     height: 145;
     border: 2.5px solid #cccccc;
     box-sizing: border-box;
