@@ -1,6 +1,5 @@
 @import "./../../components/variables.scss";
 .input-data {
-  
   &__title {
     font-size: 47px;
     line-height: 55px;
@@ -74,6 +73,7 @@
   background-color: #f6f6f6;
   height: 635px;
   overflow: hidden;
+  display: flex;
 
   &__title {
     font-size: 34px;
@@ -83,6 +83,12 @@
     font-weight: bold;
     margin-top: 70px;
     margin-bottom: 0;
+  }
+
+  &__messages {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__message {
@@ -110,12 +116,8 @@
     }
 
     &__one {
-    margin-top: 51px;
-    margin-left: 200px;
-    margin-bottom: 38px;
-    @media(max-width: 768px) {
-      margin-left: 33px;
-    }
+      margin-top: 51px;
+      margin-bottom: 38px;
 
       &:before {
         right: 28px;
@@ -123,38 +125,31 @@
     }
 
     &__two {
-    margin-bottom: 38px;
-    margin-left: 300px;
-    @media(max-width: 768px) {
-      margin-left: 135px;
-    }
+      margin-bottom: 38px;
+      margin-left: 100px;
       &:before {
-      left: 28px;
+        left: 28px;
       }
     }
 
     &__three {
-      margin-left: 200px;
       margin-bottom: 70px;
-      @media(max-width: 768px) {
-        margin-left: 33px;
-      }
+
       &:before {
         right: 28px;
       }
-    
     }
-  } 
+  }
 }
 
 .skills {
   // padding: 89px 0 22px 0;
   display: flex;
-  @media (max-width: 768px) {
-      justify-content: center;
+  @media (max-width: 1012px) {
+    justify-content: center;
   }
   flex-direction: column;
-    
+
   &__title {
     font-size: 34px;
     line-height: 40px;
@@ -175,10 +170,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    @media (max-width: 768px) {  
-      justify-content: center;
-    }
+    justify-content: center;
     margin-left: -10px !important;
     margin-right: -10px !important;
     margin-bottom: 74px !important;
@@ -217,20 +209,18 @@
       font-size: 14px;
       line-height: 16px;
       margin-right: 11px;
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         margin-right: 8px;
       }
     }
 
     &-progressbar {
-      @media (max-width: 768px){
-        width:111px;
+      @media (max-width: 768px) {
+        width: 111px;
       }
       width: 142px;
       display: block;
       background: $black-color;
-      background: -o-linear-gradient(#828282);
-
       border: 0;
       height: 9px;
 
@@ -271,6 +261,7 @@
   }
   &__button-back {
     position: relative;
+    background-color: transparent;
     border-radius: 100%;
     border: 2.5px solid #070707;
     box-sizing: border-box;
@@ -279,15 +270,19 @@
     &:hover,
     &:focus {
       border: 2.5px solid #808080;
+      cursor: pointer;
+      &:before {
+        border-bottom: 2.5px solid #808080;
+        border-right: 2.5px solid #808080;
+      }
     }
-    &::before {
+    &:before {
       content: "";
       width: 17px;
       height: 17px;
       border-bottom: 2.5px solid #070707;
       border-right: 2.5px solid #070707;
       box-sizing: border-box;
-      -webkit-transform: rotate(90deg);
       transform: rotate(137deg);
       position: absolute;
       bottom: 10px;
@@ -321,6 +316,9 @@
     margin-bottom: 25px;
     margin-top: 15px;
     width: 580px;
+    @media (max-width: 768px) {
+      width: 426px;
+    }
     height: 63px;
     margin-right: -7px;
   }
