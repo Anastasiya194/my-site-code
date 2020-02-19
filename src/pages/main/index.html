@@ -43,8 +43,7 @@
       </h2>
       <div class="about-me__messages">
         <div class="about-me__message about-me__message__one">
-          Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser
-          and responsive sites, as well as complex web applications on React.
+          Hi, I’m Anastasia - front-end developer from Togliatti. I like to create both simple single-page, cross-browser and responsive sites, as well as complex web applications on React.
         </div>
         <div class="about-me__message about-me__message__two">
           I studied at HTML Academy, my husband (front-end developer) helps me with training and as a result, I create
@@ -75,7 +74,9 @@
             <div class="skills__item-percents">
               80%
             </div>
-            <progress class="skills__item-progressbar" value="80" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_figma"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -87,7 +88,9 @@
             <div class="skills__item-percents">
               20%
             </div>
-            <progress class="skills__item-progressbar" value=20 max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_photoshop"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -99,7 +102,9 @@
             <div class="skills__item-percents">
               20%
             </div>
-            <progress class="skills__item-progressbar" value="20" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_illustrator"><span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -111,7 +116,9 @@
             <div class="skills__item-percents">
               85%
             </div>
-            <progress class="skills__item-progressbar" value="85" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_html-5"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -123,7 +130,9 @@
             <div class="skills__item-percents">
               55%
             </div>
-            <progress class="skills__item-progressbar" value=55 max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_css-scss"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -135,7 +144,9 @@
             <div class="skills__item-percents">
               5%
             </div>
-            <progress class="skills__item-progressbar" value="5" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_JavaScript"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -147,7 +158,9 @@
             <div class="skills__item-percents">
               0%
             </div>
-            <progress class="skills__item-progressbar" value="0" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_React-JS"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -159,7 +172,9 @@
             <div class="skills__item-percents">
               0%
             </div>
-            <progress class="skills__item-progressbar" value="0" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_gulp"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -171,7 +186,9 @@
             <div class="skills__item-percents">
               15%
             </div>
-            <progress class="skills__item-progressbar" value="15" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_Git-GitHub"></span>
+            </span>
           </div>
         </li>
         <li class="skills__item">
@@ -183,7 +200,9 @@
             <div class="skills__item-percents">
               10%
             </div>
-            <progress class="skills__item-progressbar" value="10" max="100"></progress>
+            <span class="skills__item-progressbar">
+              <span class="skills__item-progressbar skills__item-progressbar_BEM"></span>
+            </span>
           </div>
         </li>
       </ul>
@@ -203,7 +222,6 @@
       </div>
       <div class="portfolio__slider-control">
         <button class="portfolio__button-back" alt="кнопка назад">
-          <div class="portfolio__button-back_line"></div>
         </button>
         <div class="portfolio__switch">
           <div class="portfolio__slider-title">
@@ -216,7 +234,7 @@
           <div class="portfolio__pagination">
             <button class="portfolio__pagination-item-slider">
             </button>
-            <button class="portfolio__pagination-item-slider portfolio__pagination-item-slider_active">
+            <button class="portfolio__pagination-item-slider portfolio">
             <button class="portfolio__pagination-item-slider">
             </button>
           </div>
@@ -235,13 +253,13 @@
       </button>
       <label class="modal-window__group modal-window__group_one">
         <div class="modal-window__title modal-window__title_one">
-          Как вас зовут?<span class="required">*</span>
+          Как вас зовут?<span class="modal-window__required">*</span>
         </div>
-        <input type="text" placeholder="Иван Иванович" class="modal-window__name">
+        <input type="text" class="modal-window__name">
       </label>
-      <label class="modal-window__group_two">
+      <label class="modal-window__group modal-window__group_two">
         <div class="modal-window__title modal-window__title_two">
-          Тема сообщения <span class="required">*</span>
+          Тема сообщения <span class="modal-window__required">*</span>
         </div>
         
         <input type="text" class="modal-window__topic">

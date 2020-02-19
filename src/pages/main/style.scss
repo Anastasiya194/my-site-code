@@ -59,6 +59,8 @@
     &:active,
     &:focus {
       color: $black-color;
+      cursor: pointer;
+      transition: color .5s;
     }
   }
 
@@ -69,9 +71,9 @@
 }
 
 .about-me {
-  // padding: 70px 0 0 0;
+  // padding: 70px 0 85px 0;
   background-color: #f6f6f6;
-  height: 635px;
+
   overflow: hidden;
   display: flex;
 
@@ -94,7 +96,7 @@
   &__message {
     width: 478px;
     border: 2.5px solid $black-color;
-    padding: 14px;
+    padding: 12.5px;
     box-sizing: border-box;
     font-size: 18px;
     line-height: 21px;
@@ -117,7 +119,7 @@
 
     &__one {
       margin-top: 51px;
-      margin-bottom: 38px;
+      margin-bottom: 43.2px;
 
       &:before {
         right: 28px;
@@ -125,7 +127,7 @@
     }
 
     &__two {
-      margin-bottom: 38px;
+      margin-bottom: 43px;
       margin-left: 100px;
       &:before {
         left: 28px;
@@ -133,7 +135,7 @@
     }
 
     &__three {
-      margin-bottom: 70px;
+      margin-bottom: 86px;
 
       &:before {
         right: 28px;
@@ -145,11 +147,10 @@
 .skills {
   // padding: 89px 0 22px 0;
   display: flex;
-  @media (max-width: 1012px) {
+  flex-direction: column;
+ @media (max-width: 1012px) {
     justify-content: center;
   }
-  flex-direction: column;
-
   &__title {
     font-size: 34px;
     line-height: 40px;
@@ -215,21 +216,145 @@
     }
 
     &-progressbar {
+      width: 142px;
+      display: block;
+      background: #E5E5E5;
+      border: 0;
+      height: 9px;
+      overflow: hidden;
       @media (max-width: 768px) {
         width: 111px;
       }
-      width: 142px;
-      display: block;
-      background: $black-color;
-      border: 0;
-      height: 9px;
 
-      &::-webkit-progress-bar {
-        background-color: #e5e5e5;
-        border-radius: 2px;
+      & span {
+        height: 9px;
+        float: left;
+        background-color: $black-color;
       }
-      &::-webkit-progress-value {
-        border-radius: 2px;
+      &_figma {
+        width: 80%;
+        animation: figma 2s;
+        @keyframes figma{
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 80%;
+          }
+        }
+      }
+      &_photoshop {
+        width: 20%;
+        animation: photoshop 2s;
+        @keyframes photoshop{
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 20%;
+          }
+        }
+      }
+
+      &_illustrator {
+        width: 20%;
+        animation: illustrator 2s;
+        @keyframes illustrator {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 20%;
+          }
+        }
+      }
+
+      &_html-5 {
+        width: 85%;
+        animation: html-5 2s;
+        @keyframes html-5 {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 85%;
+          }
+        }
+      }
+      &_css-scss {
+        width: 55%;
+        animation: css-scss  2s;
+        @keyframes css-scss {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 55%;
+          }
+        }
+      }
+
+      &_JavaScript {
+        width: 5%;
+        animation: JavaScript 2s;
+        @keyframes JavaScript {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 5%;
+          }
+        }
+      }
+
+      &_React-JS {
+        width: 0%;
+        animation: React-JS 2s;
+        @keyframes React-JS {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 0%;
+          }
+        }
+      }
+      &_gulp {
+        width: 0%;
+        animation: gulp 2s;
+        @keyframes gulp {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 0%;
+          }
+        }
+      }
+
+      &_Git-GitHub {
+        width: 15%;
+        animation: Git-GitHub 2s;
+        @keyframes Git-GitHub {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 15%;
+          }
+        }
+      }
+      &_BEM {
+        width: 10%;
+        animation: BEM 2s;
+        @keyframes BEM{
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 10%;
+          }
+        }
       }
     }
   }
@@ -314,17 +439,17 @@
     text-align: center;
     color: $black-color;
     margin-bottom: 25px;
-    margin-top: 15px;
+    margin-top: 14px;
     width: 580px;
+    margin-right: -7px;
     @media (max-width: 768px) {
       width: 426px;
     }
-    height: 63px;
-    margin-right: -7px;
   }
 
   &__pagination {
     margin-bottom: 60px;
+    display: flex;
   }
 
   &__pagination-item-slider {
@@ -340,10 +465,15 @@
     &_active {
       background-color: $black-color;
     }
-
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+    
     &:not(.portfolio__pagination-item-slider_active):hover,
     &:not(.portfolio__pagination-item-slider_active):focus {
       background-color: #808080;
+      cursor: pointer;
     }
   }
 
@@ -372,36 +502,39 @@
   &__form {
     background-color: #ffffff;
     width: 680px;
-    @media (max-width: 768px) {
-      width: 648px;
-    }
-    height: 542px;
     border: 2.5px solid $black-color;
     margin: auto;
     position: relative;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 41px 40px;
     box-sizing: border-box;
+    @media (max-width: 768px) {
+      width: 648px;
+    }
   }
 
   &__title {
     font-size: 14px;
     line-height: 16px;
     color: $black-color;
-    margin-bottom: 6px;
 
     &_one {
-      margin-top: 38.5px;
+      margin-bottom: 6px;
     }
     &_two {
-      margin-top: 20px;
+      margin-bottom: 6px;
     }
+
+    &_three {
+      margin-bottom: 6px;
+    }
+
     &_four {
-      margin-top: 20px;
+      margin-bottom: 6px;
     }
+
     &_five {
-      margin-left: 15px;
       color: #dddddd;
+      margin-left: 15px;
 
       &:hover,
       &:focus {
@@ -413,6 +546,7 @@
   &__button-close {
     position: absolute;
     right: -34;
+    top: -3px;
     width: 25.46px;
     height: 24px;
     border: none;
@@ -448,11 +582,14 @@
     }
   }
 
+  &__required {
+    color: red;
+    margin-left: 2px;
+  }
+
   &__group {
-    background: #ffffff;
 
     &_one {
-      margin-bottom: 17.5px;
       margin-top: 41px;
     }
     &_two {
@@ -467,7 +604,6 @@
     }
     &_five {
       display: flex;
-      margin-top: 20px;
       color: #dddddd;
       position: relative;
     }
@@ -475,12 +611,15 @@
 
   &__name {
     width: 595px;
+    height: 45px;
+    padding: 14px 15px;
+    border: 2.5px solid #cccccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: border 0.5s;
     @media (max-width: 768px) {
       width: 563px;
     }
-    height: 45px;
-    border: 2.5px solid #cccccc;
-    box-sizing: border-box;
     &:hover {
       border: 2.5px solid #808080;
       transition: border 0.5s;
@@ -493,13 +632,15 @@
 
   &__topic {
     width: 285px;
-    @media (max-width: 768px) {
-      width: 270px;
-    }
-    height: 45px;
     border: 2.5px solid #cccccc;
+    padding: 14px 15px;
     box-sizing: border-box;
     display: inline-block;
+    margin-bottom: 20px;
+    transition: border 0.5s;
+      @media (max-width: 768px) {
+      width: 270px;
+    }
     &:hover {
       border: 2.5px solid #808080;
       transition: border 0.5s;
@@ -511,13 +652,15 @@
   }
   &__mail {
     width: 285px;
+    border: 2.5px solid #cccccc;
+    padding: 14px 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: border 0.5s;
     @media (max-width: 768px) {
       width: 270px;
     }
-    height: 45px;
-    border: 2.5px solid #cccccc;
-    box-sizing: border-box;
-    display: inline-block;
     &:hover {
       border: 2.5px solid #808080;
       transition: border 0.5s;
@@ -529,12 +672,22 @@
   }
   &__comment {
     width: 595px;
-    @media (max-width: 768px) {
-      width: 563px;
-    }
-    height: 145;
-    border: 2.5px solid #cccccc;
+    padding: 14px 15px;
     box-sizing: border-box;
+    max-width: 600px;
+    min-width: 600px;
+    max-height: 150px;
+    min-height: 150px;
+    margin-bottom: 20px;
+    transition: border 0.5s;
+    border: 2.5px solid #cccccc;
+    @media (max-width: 768px) {
+    min-width: 568px;
+    max-width: 568px;
+    max-height: 150px;
+    min-height: 150px;
+
+    }
     &:hover {
       border: 2.5px solid #808080;
       transition: border 0.5s;
@@ -543,21 +696,14 @@
       border: 2.5px solid #070707;
       transition: border 0.5s;
     }
-    &:focus {
-      border: 2.5px solid #808080;
-      transition: border 0.5s;
-    }
-    &:focus {
-      border: 2.5px solid #070707;
-      transition: border 0.5s;
-    }
+
   }
+
   &__agreement {
     position: absolute;
     pointer-events: none;
     width: 0;
     height: 0;
-
     &:checked ~ .modal-window__fake-input {
       border: 2.5px solid #070707;
 
@@ -567,6 +713,7 @@
     }
     &:checked ~ .modal-window__title_five {
       color: #070707;
+  
     }
   }
   &__fake-input {
@@ -577,8 +724,11 @@
     box-sizing: border-box;
     position: relative;
     border-radius: 3px;
+    margin-bottom: 20px;
+    transition: color 0.5s;
 
     &:hover {
+      transition: color 0.5s;
       border: 2px solid #828282;
       box-sizing: border-box;
     }
@@ -598,11 +748,10 @@
     background-color: transparent;
     color: #dddddd;
     border: 2.5px solid #dddddd;
+    padding: 10px 19px ;
     box-sizing: border-box;
-    width: 131px;
-    height: 42px;
     border-radius: 30px;
-    margin-top: 20px;
+
     &:hover,
     &:focus {
       color: #828282;

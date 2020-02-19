@@ -2,13 +2,13 @@
   background-color: #ffffff;
  
   &__menu { 
-    @media(max-width: 375px){
-      display: none;
-    }
     padding-top: 35px;
     padding-bottom: 31px;
     box-sizing: border-box;
     border-bottom: 1px solid black;
+    @media(max-width: 375px){
+      display: none;
+    }
   }
 
   &__link {
@@ -17,6 +17,8 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
+    transition: color .4s;
+  
 
     &:active {
       color: #070707;

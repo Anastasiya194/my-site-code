@@ -1,5 +1,4 @@
 .contacts {
-  background-color: #fff;
 
   &__title {
     font-size: 34px;
@@ -7,7 +6,7 @@
     text-align: center;
     color: #070707;
     font-weight: bold;
-    margin-top: 63.5px;
+    margin-top: 70px;
     margin-bottom: 0;
   }
 
@@ -16,31 +15,35 @@
     line-height: 21px;
     text-align: center;
     color: #070707;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    height: 43px;
+    margin-top: 23px;
+    margin-bottom: 31px;
     max-width: 275px;
   }
 
   &__button-window {
     background: #070707;
     width: 180px;
-    height: 42px;
     border-radius: 30px;
-
+    padding: 10px 26.5px;
+    box-sizing: border-box;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
     border: none;
+    transition: color .5s;
+    transition: background-color .5s;
     &:hover,
     &:focus {
       background-color:transparent;
       color: #070707;
       border: 2.5px solid #070707;
       box-sizing: border-box;
+      padding: 7.5px;
       cursor: pointer;
+      transition: color .5s;
+      transition: background-color .5s;
     }
   }
 
@@ -55,7 +58,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 328px;
-    margin: 40px 0 36px 0!important;
+    margin: 42px 0 36px 0!important;
   }
 
   &__item {
@@ -76,10 +79,15 @@
     text-align: center;
     color: #000000;
     text-decoration: none;
+    transition: color .5s;
+    transition: background-color .5s;
     &:hover,
     &:focus {
       background: #070707;
       color: #FFFFFF;
+      cursor: pointer;
+      transition: color .5s;
+      transition: background-color .5s;
     }
   }
   &__who-did {
@@ -102,6 +110,8 @@
       border-bottom: 1px solid #070707;
       color: #070707;
       cursor: pointer;
+      transition: color .5s;
+      transition: border .5s;
     }
   }
 }
